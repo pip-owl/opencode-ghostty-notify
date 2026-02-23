@@ -27,12 +27,6 @@ Add to your OpenCode configuration (`.opencode/config.json`):
 }
 ```
 
-Or use the CLI:
-
-```bash
-opencode config add plugin opencode-ghostty-notify
-```
-
 ## How it works
 
 When OpenCode detects that a session has gone idle (all tasks completed), this plugin:
