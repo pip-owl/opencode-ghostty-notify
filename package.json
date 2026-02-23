@@ -1,0 +1,50 @@
+{
+  "name": "opencode-ghostty-notify",
+  "version": "1.0.0",
+  "description": "OpenCode plugin that plays a system sound when session goes idle (Ghostty-friendly)",
+  "type": "module",
+  "main": "./dist/index.js",
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "import": "./dist/index.js",
+      "types": "./dist/index.d.ts"
+    }
+  },
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "tsup src/index.ts --format esm --dts",
+    "dev": "tsup src/index.ts --format esm --dts --watch",
+    "prepublishOnly": "bun run build"
+  },
+  "keywords": [
+    "opencode",
+    "opencode-plugin",
+    "ghostty",
+    "terminal",
+    "notification",
+    "sound",
+    "alert"
+  ],
+  "author": "Pip <pip.x.owl@gmail.com>",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/pip-owl/opencode-ghostty-notify.git"
+  },
+  "bugs": {
+    "url": "https://github.com/pip-owl/opencode-ghostty-notify/issues"
+  },
+  "homepage": "https://github.com/pip-owl/opencode-ghostty-notify#readme",
+  "peerDependencies": {
+    "@opencode-ai/plugin": ">=1.0.0"
+  },
+  "devDependencies": {
+    "@opencode-ai/plugin": "^1.2.10",
+    "tsup": "^8.5.1",
+    "typescript": "^5.9.3"
+  }
+}
